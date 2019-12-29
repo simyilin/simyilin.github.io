@@ -1,0 +1,63 @@
+.nav a {
+  color: #0053ad;
+}
+
+.header_logo img {
+  width: 50px;
+  margin: 3% 0;
+}
+
+.header_text {
+  width: 50%;
+  font-family: monospace;
+  font-size: 200%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_icon img {
+  width: 50px;
+  padding: 5%;
+}
+
+.mobile_header {
+  display: none;
+}
+
+.container {
+  background-image: url("../images/watercolour.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+@media screen and (max-width: 735px) {
+  .nav-item {
+    display: none;
+  }
+
+  .mobile_header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100px;
+  }
+
+  .header_icon:hover {
+    background: rgba(162, 196, 193, 0.5);
+    border-radius: 15%;
+  }
+
+  .nav-item.popup {
+    display: block;
+    min-width: 100vw;
+  }
+
+  .nav-link.active {
+    border-color: #dee2e6 !important;
+  }
+}

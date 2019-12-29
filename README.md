@@ -1,2 +1,1 @@
-# simyilin.github.io
-Personal website
+# pantherstock.github.io

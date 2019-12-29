@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="javascript/main.js"></script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="images/icon.png" />
+    <title>IM YI LIN</title>
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <header>
+      <div class="mobile_header">
+        <div class="header_logo">
+          <img src="images/logo.png" alt="logo" />
+        </div>
+        <div class="header_text">
+          <p>SIM YI LIN</p>
+        </div>
+        <div class="header_icon" onclick="toggleMobileMenu()">
+          <img
+            src="images/icons/hamburger_menu.png"
+            alt="hamburger menu icon"
+          />
+        </div>
+      </div>
+      <ul class="nav nav-tabs nav-justified">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="projects.html">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </header>
+
+    <div class="container">
+      <div class="main">
+        <div class="main_logo">
+          <img src="images/logo.png" alt="logo" />
+        </div>
+        <div class="main_text">
+          <h1 id="type_text"></h1>
+          <p id="fade_text">
+            Web Development (HTML, CSS, Bootstrap, PHP, SQL, Javascript, React)
+            <br />
+            Machine Learning (scikit-learn, matlab) <br />
+            Unity Game Development with C# <br />
+            Python
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-5" id="recentActivities">
+          <h2>What I've been up to:</h2>
+          <p><i>(Hover over the icons!)</i></p>
+          <div
+            class="item"
+            id="web"
+            onmouseover="revealActivity(this.id)"
+            onmouseout="removeActivity(this.id)"
+          >
+            <img id="webImage" alt="web icon" src="images/icons/web.png" />
+
+            <p id="webText"></p>
+          </div>
+
+          <div
+            class="item"
+            id="german"
+            onmouseover="revealActivity(this.id)"
+            onmouseout="removeActivity(this.id)"
+          >
+            <img
+              id="germanImage"
+              alt="german flag"
+              src="images/icons/germanyflag.png"
+            />
+
+            <p id="germanText"></p>
+          </div>
+
+          <div
+            class="item"
+            id="dance"
+            onmouseover="revealActivity(this.id)"
+            onmouseout="removeActivity(this.id)"
+          >
+            <img
+              id="danceImage"
+              alt="dancer icon"
+              src="images/icons/dancer.png"
+            />
+
+            <p id="danceText"></p>
+          </div>
+        </div>
+
+        <div class="col-md-5" id="interests">
+          <h2>My Interests:</h2>
+          <div class="item interest">
+            <img alt="harmonica icon" src="images/icons/harmonica.png" />
+            <p>Harmonica</p>
+          </div>
+          <div class="item interest">
+            <img alt="saturn icon" src="images/icons/saturn.png" />
+            <p>Astronomy</p>
+          </div>
+          <div class="item interest">
+            <img alt="atom" src="images/icons/atom.png" />
+            <p>Quantum Physics</p>
+          </div>
+          <div class="item interest">
+            <img alt="brain" src="images/icons/brain.png" />
+            <p>Neuroscience</p>
+          </div>
+          <div class="item interest">
+            <img alt="laptop" src="images/icons/laptop.png" />
+            <p>Coding</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var myText = "Welcome to my personal website! :)";
+      var myArray = myText.split("");
+      var loopTimer;
+      const typeText = document.getElementById("type_text");
+      const fadeText = document.getElementById("fade_text");
+
+      function frameLooper() {
+        if (myArray.length > 0) {
+          typeText.innerHTML += myArray.shift();
+        } else {
+          clearTimeout(loopTimer);
+          fadeText.style.opacity = "1";
+          return false;
+        }
+        loopTimer = setTimeout("frameLooper()", 70);
+      }
+
+      frameLooper();
+    </script>
+  </body>
+</html>

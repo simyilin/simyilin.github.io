@@ -1,0 +1,104 @@
+a {
+  color: #0053ad;
+}
+
+.header_logo img {
+  width: 50px;
+  margin: 3% 0;
+}
+
+.header_text {
+  width: 50%;
+  font-family: monospace;
+  font-size: 200%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_icon img {
+  width: 50px;
+  padding: 5%;
+}
+
+.mobile_header {
+  display: none;
+}
+
+.box {
+  border: solid 1px black;
+  margin: 5%;
+  padding: 5%;
+  background-image: url("../images/watercolour.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: inline-block;
+}
+
+.row img {
+  width: 100%;
+  display: inline-block;
+  margin-top: 3%;
+  transform: translateX(-30%) scale(0.95);
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.row img.active {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+}
+
+h2,
+p {
+  display: inline-block;
+  margin: 3%;
+  margin-top: 0;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 5%;
+  font-variant: small-caps;
+}
+
+@media screen and (max-width: 770px) {
+  .nav-item {
+    display: none;
+  }
+
+  .mobile_header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100px;
+  }
+
+  .header_icon:hover {
+    background: rgba(162, 196, 193, 0.5);
+    border-radius: 15%;
+  }
+
+  .nav-item.popup {
+    display: block;
+    min-width: 100vw;
+  }
+
+  .nav-link.active {
+    border-color: #dee2e6 !important;
+  }
+
+  .row {
+    border: 5px rgba(255, 255, 255, 0.7) solid;
+    padding-top: 5%;
+  }
+
+  .row img {
+    margin-top: 0;
+  }
+
+  h2 {
+    margin-top: 3%;
+  }
+}

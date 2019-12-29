@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/blog.css" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="images/icon.png" />
+    <title>IM YI LIN</title>
+  </head>
+
+  <body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <header>
+      <div class="mobile_header">
+        <div class="header_logo">
+          <img src="images/logo.png" alt="logo" />
+        </div>
+        <div class="header_text">
+          <p>SIM YI LIN</p>
+        </div>
+        <div class="header_icon" onclick="toggleMobileMenu()">
+          <img
+            src="images/icons/hamburger_menu.png"
+            alt="hamburger menu icon"
+          />
+        </div>
+      </div>
+      <ul class="nav nav-tabs nav-justified">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="projects.html">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Contact</a>
+        </li>
+      </ul>
+    </header>
+    <div class="container">
+      <div id="wufoo-z1y7wjhr06evmqj" style="padding:3%">
+        Fill out my
+        <a href="https://simyilin.wufoo.com/forms/z1y7wjhr06evmqj"
+          >online form</a
+        >.
+      </div>
+    </div>
+
+    <script>
+      var menuOpen = false;
+
+      function toggleMobileMenu() {
+        const navItems = document.querySelectorAll(".nav-item");
+        if (!menuOpen) {
+          navItems.forEach(navItem => navItem.classList.add("popup"));
+          menuOpen = true;
+        } else {
+          navItems.forEach(navItem => navItem.classList.remove("popup"));
+          menuOpen = false;
+        }
+      }
+
+      var z1y7wjhr06evmqj;
+      (function(d, t) {
+        var s = d.createElement(t),
+          options = {
+            userName: "simyilin",
+            formHash: "z1y7wjhr06evmqj",
+            autoResize: true,
+            height: "684",
+            async: true,
+            host: "wufoo.com",
+            header: "show",
+            ssl: true
+          };
+        s.src =
+          ("https:" == d.location.protocol ? "https://" : "http://") +
+          "secure.wufoo.com/scripts/embed/form.js";
+        s.onload = s.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs) if (rs != "complete") if (rs != "loaded") return;
+          try {
+            z1y7wjhr06evmqj = new WufooForm();
+            z1y7wjhr06evmqj.initialize(options);
+            z1y7wjhr06evmqj.display();
+          } catch (e) {}
+        };
+        var scr = d.getElementsByTagName(t)[0],
+          par = scr.parentNode;
+        par.insertBefore(s, scr);
+      })(document, "script");
+    </script>
+  </body>
+</html>
