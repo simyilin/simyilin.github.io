@@ -65,6 +65,9 @@
           <a class="nav-link" href="projects.html">Projects</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="blog.html">Blog</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="contact.html">Contact</a>
         </li>
       </ul>
@@ -78,58 +81,90 @@
         <div class="main_text">
           <h1 id="type_text"></h1>
           <p id="fade_text">
-            Web Development (HTML, CSS, Bootstrap, PHP, SQL, Javascript, React)
-            <br />
-            Machine Learning (scikit-learn, matlab) <br />
-            Unity Game Development with C# <br />
-            Python
+            I am a student at the University of Michigan - Ann Arbor. <br />
+            I work part-time as a web developer at Michigan Medicine Office of
+            Development. <br />
+            I am always looking for opportunities to grow and learn new things.
           </p>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-5" id="recentActivities">
-          <h2>What I've been up to:</h2>
-          <p><i>(Hover over the icons!)</i></p>
-          <div
-            class="item"
-            id="web"
-            onmouseover="revealActivity(this.id)"
-            onmouseout="removeActivity(this.id)"
-          >
-            <img id="webImage" alt="web icon" src="images/icons/web.png" />
-
-            <p id="webText"></p>
+          <h2>Recent activities</h2>
+          <div class="item">
+            <div>
+              <h3 style="text-align: center">20 <br />Dec</h3>
+            </div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <p id="text">
+              Winter break starts. Time to relax and learn something new!
+            </p>
           </div>
 
-          <div
-            class="item"
-            id="german"
-            onmouseover="revealActivity(this.id)"
-            onmouseout="removeActivity(this.id)"
-          >
-            <img
-              id="germanImage"
-              alt="german flag"
-              src="images/icons/germanyflag.png"
-            />
-
-            <p id="germanText"></p>
+          <div class="item">
+            <div>
+              <h3 style="text-align: center">17 <br />Dec</h3>
+            </div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <p id="text">
+              Organized an activity to make Tang&nbsp;Yuen (a sweet Chinese
+              dessert) with my hallmates. :)
+            </p>
           </div>
 
-          <div
-            class="item"
-            id="dance"
-            onmouseover="revealActivity(this.id)"
-            onmouseout="removeActivity(this.id)"
-          >
-            <img
-              id="danceImage"
-              alt="dancer icon"
-              src="images/icons/dancer.png"
-            />
+          <div class="item">
+            <div>
+              <h3 style="text-align: center">7 <br />Dec</h3>
+            </div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <p id="text">
+              Volunteered for a Girls Who Code Web Development workshop at the
+              Ann Arbor District Library.
+            </p>
+          </div>
 
-            <p id="danceText"></p>
+          <div class="item">
+            <div>
+              <h3 style="text-align: center">28 <br />Nov</h3>
+            </div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <p id="text">
+              Joined a few friends on a trip to Detroit to see the annual
+              Thanksgiving parade.
+            </p>
+          </div>
+
+          <div class="item">
+            <div>
+              <h3 style="text-align: center">25 <br />Nov</h3>
+            </div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <p id="text">
+              Volunteered for a PyGame workshop at Pioneer High School
+              (ArborHacks).
+            </p>
+          </div>
+
+          <div class="item">
+            <div>
+              <h3 style="text-align: center">25 <br />Oct</h3>
+            </div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <p id="text">
+              Joined the Student Astronomy Society for a stargazing trip to Fish
+              Lake.
+            </p>
+          </div>
+
+          <div class="item">
+            <div>
+              <h3 style="text-align: center">11 <br />Oct</h3>
+            </div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <p id="text">
+              Participated in MHacks, a 36-hour hackathon.
+            </p>
           </div>
         </div>
 
@@ -158,8 +193,9 @@
         </div>
       </div>
     </div>
+    <footer>Last updated: 28 December 2019</footer>
     <script>
-      var myText = "Welcome to my personal website! :)";
+      var myText = "Welcome to my personal website!";
       var myArray = myText.split("");
       var loopTimer;
       const typeText = document.getElementById("type_text");
